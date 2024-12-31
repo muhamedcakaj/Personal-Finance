@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: Spring-Cloud-Gateway
+  cloud:
+    gateway:
+      routes:
+        - id: user-service
+          uri: lb://USER
+          predicates:
+            - Path=/v1/user/**
+        - id: bilanci-service
+          uri: lb://BILANCI
+          predicates:
+            - Path=/v1/bilanc/**
+        - id: transactions-service
+          uri: lb://Transactions
+          predicates:
+            - Path=/v1/transactions/**
+        - id: admin-endpoints
+          uri: lb://USER
+          predicates:
+            - Path=/v1/admin/**
+    discovery:
+      client:
+        enabled: true
+  eureka:
+    client:
+      service-url:
+        default-zone: http://localhost:8761/eureka
+
+server:
+  port: 8083
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: prometheus
+    metrics:
+      export:
+        prometheus:
+          enabled: true

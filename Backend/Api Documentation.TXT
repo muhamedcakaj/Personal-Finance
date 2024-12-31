@@ -1,0 +1,3 @@
+User : http://localhost:8080/swagger-ui/index.html#/
+Bilanc : http://localhost:8081/swagger-ui/index.html#/
+Transactions : http://localhost:8082/swagger-ui/index.html#/
