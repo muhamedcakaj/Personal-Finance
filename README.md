@@ -20,15 +20,19 @@ Ky projekt ofron mjete për menaxhimin e financave personale për përdoruesit. 
 ### Teknologjitë dhe Praktikat e Përdorura:
 1. **Mikroshërbime:**
    - Shërbime të vogla dhe të pavarura që komunikojnë përmes API-ve, duke mundësuar zhvillim dhe shkallëzim të lehtë.
-
+   - 
 2. **Autentifikimi dhe Autorizimi:**
    - Siguri përmes fjalëkalimeve dhe roleve të ndryshme për qasje.
+   - Verifikimi i email-it përmes një kodi që dërgohet në email-in e përdoruesit pas login. 
+   - Gjenerimi i JWT token pas verifikimit të suksesshëm, i cili përmban *username* dhe *role*. 
+   - Skadimi i token-it pas një kohe të caktuar dhe kërkesa për rilogim. 
 
 3. **Caching:**
    - Ruajtje e të dhënave në memorie (p.sh., Redis) për përmirësimin e performancës.
 
 4. **Load Balancing:**
    - Shpërndarje e trafikut mes serverëve për shmangien e mbingarkesës.
+   - Përdorimi i Eureka Server për shpërndarjen dinamike të kërkesave ndërmjet instanceve të mikroshërbimeve. 
 
 5. **Swagger UI:**
    - Dokumentacion interaktiv për API-të.
@@ -37,7 +41,8 @@ Ky projekt ofron mjete për menaxhimin e financave personale për përdoruesit. 
    - Përdorimi i mjeteve si Grafana dhe Prometheus për të ndjekur performancën.
 
 7. **API Gateway:**
-   - Menaxhimi i kërkesave dhe autentifikimi përmes një komponenti të dedikuar.
+   - Menaxhimi i kërkesave dhe autentifikimi përmes një komponenti të dedikuar (Spring Cloud Gateway). 
+   - Validimi i JWT token-it dhe kontrolli i roleve të përdoruesit (autorizim). 
 
 8. **Testimi:**
    - Teste automatike për sigurimin e funksionalitetit korrekt.
