@@ -20,7 +20,7 @@ Ky projekt ofron mjete për menaxhimin e financave personale për përdoruesit. 
 ### Teknologjitë dhe Praktikat e Përdorura:
 1. **Mikroshërbime:**
    - Shërbime të vogla dhe të pavarura që komunikojnë përmes API-ve, duke mundësuar zhvillim dhe shkallëzim të lehtë.
-   - 
+     
 2. **Autentifikimi dhe Autorizimi:**
    - Siguri përmes fjalëkalimeve dhe roleve të ndryshme për qasje.
    - Verifikimi i email-it përmes një kodi që dërgohet në email-in e përdoruesit pas login. 
